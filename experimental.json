@@ -1,328 +1,329 @@
 [
   {
-  "checktype": {
-    "name": "vulcan-aws-alerts-experimental",
-    "description": "Detects general issues for an AWS account",
-    "timeout": 120,
-    "enabled": true,
-    "options": null,
-    "required_vars": [
-      "VULCAN_ASSUME_ROLE_ENDPOINT",
-      "ROLE_NAME"
-    ],
-    "image": "registry.hub.docker.com/vulcansec/vulcan-aws-alerts:experimental",
-    "assets": [
-      "AWSAccount"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-aws-trusted-advisor-experimental",
-    "description": "Detects general issues for an AWS account",
-    "timeout": 120,
-    "enabled": true,
-    "options": null,
-    "required_vars": [
-      "VULCAN_ASSUME_ROLE_ENDPOINT",
-      "ROLE_NAME"
-    ],
-    "image": "registry.hub.docker.com/vulcansec/vulcan-aws-trusted-advisor:experimental",
-    "assets": [
-      "AWSAccount"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-certinfo-experimental",
-    "description": "Gathers TLS Certificate information",
-    "timeout": 60,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-certinfo:experimental",
-    "assets": [
-      "Hostname"
-    ]
-  }
-},
-{
     "checktype": {
-        "name": "vulcan-dkim-experimental",
-        "description": "Checks if a domain have valid DNS configuration for DKIM",
-        "timeout": 60,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-dkim:experimental",
-        "assets": [
-            "DomainName"
-        ]
+      "name": "vulcan-aws-alerts-experimental",
+      "description": "Detects general issues for an AWS account",
+      "timeout": 120,
+      "enabled": true,
+      "options": null,
+      "required_vars": [
+        "VULCAN_ASSUME_ROLE_ENDPOINT",
+        "ROLE_NAME"
+      ],
+      "image": "registry.hub.docker.com/vulcansec/vulcan-aws-alerts:experimental",
+      "assets": [
+        "AWSAccount"
+      ]
     }
-},
-{
+  },
+  {
     "checktype": {
-        "name": "vulcan-dmarc-experimental",
-        "description": "Checks if a domain have valid DNS configuration for DKIM",
-        "timeout": 60,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-dmarc:experimental",
-        "assets": [
-            "DomainName"
-        ]
+      "name": "vulcan-aws-trusted-advisor-experimental",
+      "description": "Detects general issues for an AWS account",
+      "timeout": 120,
+      "enabled": true,
+      "options": null,
+      "required_vars": [
+        "VULCAN_ASSUME_ROLE_ENDPOINT",
+        "ROLE_NAME"
+      ],
+      "image": "registry.hub.docker.com/vulcansec/vulcan-aws-trusted-advisor:experimental",
+      "assets": [
+        "AWSAccount"
+      ]
     }
-},
-{
+  },
+  {
     "checktype": {
-        "name": "vulcan-drupal-experimental",
-        "description": "Checks for some vulnerable versions of Drupal",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-drupal:experimental",
-        "assets": [
-            "Hostname"
-        ]
+      "name": "vulcan-certinfo-experimental",
+      "description": "Gathers TLS Certificate information",
+      "timeout": 60,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-certinfo:experimental",
+      "assets": [
+        "Hostname"
+      ]
     }
-},
-{
+  },
+  {
     "checktype": {
-        "name": "vulcan-exposed-bgp-experimental",
-        "description": "Checks for exposed BGP port on Internet routers",
-        "timeout": 60,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-bgp:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
+      "name": "vulcan-dkim-experimental",
+      "description": "Checks if a domain have valid DNS configuration for DKIM",
+      "timeout": 60,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-dkim:experimental",
+      "assets": [
+        "DomainName"
+      ]
     }
-},
-{
-  "checktype": {
-    "name": "vulcan-exposed-db-experimental",
-    "description": "Checks if an asset has database well known ports open",
-    "timeout": 300,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-db:experimental",
-    "assets": [
-      "Hostname",
-      "IP"
-    ]
+  },
+  {
+    "checktype": {
+      "name": "vulcan-dmarc-experimental",
+      "description": "Checks if a domain have valid DNS configuration for DKIM",
+      "timeout": 60,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-dmarc:experimental",
+      "assets": [
+        "DomainName"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-drupal-experimental",
+      "description": "Checks for some vulnerable versions of Drupal",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-drupal:experimental",
+      "assets": [
+        "Hostname"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-bgp-experimental",
+      "description": "Checks for exposed BGP port on Internet routers",
+      "timeout": 60,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-bgp:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-db-experimental",
+      "description": "Checks if an asset has database well known ports open",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-db:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-ftp-experimental",
+      "description": "Checks if an asset has FTP well known ports open and if they allow anonymous logins or if they are vulnerable to bounce attack",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-ftp:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-hdfs-experimental",
+      "description": "Checks if an asset has an Hadoop HDFS port exposed",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-hdfs:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-http-experimental",
+      "description": "Checks if an asset has HTTP well known ports open",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-http:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-http-resources-experimental",
+      "description": "This checks looks for a well known or custom list of exposed resources in an HTTP address",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-http-resources:experimental",
+      "assets": [
+        "Hostname",
+        "WebAddress"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-memcached-experimental",
+      "description": "Checks if the asset contains an exposed Memcached server",
+      "timeout": 300,
+      "enabled": true,
+      "options": "{\"port\": 11211}",
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-memcached:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-rdp-experimental",
+      "description": "Checks if an asset has a RDP port exposed",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-rdp:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-ssh-experimental",
+      "description": "Checks SSH server configuration for compliance with Mozilla OpenSSH guidelines",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-ssh:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-varnish-experimental",
+      "description": "Checks if an asset has a Varnish server exposed",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-varnish:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-exposed-heartbleed-experimental",
+      "description": "Checks if an asset is vulnerable to Heartbleed",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-heartbleed:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-http-headers-experimental",
+      "description": "Analyzes the HTTP headers using Mozilla Observatory",
+      "timeout": 600,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-http-headers:experimental",
+      "assets": [
+        "Hostname"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-retirejs-experimental",
+      "description": "Checks web pages for vulnerable JavaScript libraries",
+      "timeout": 300,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-retirejs:experimental",
+      "assets": [
+        "Hostname"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-tls-experimental",
+      "description": "Analyzes TLS health of an asset using Mozilla Observatory",
+      "timeout": 600,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-tls:experimental",
+      "assets": [
+        "Hostname"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-trivy-experimental",
+      "description": "Scan docker images using aquasec/trivy",
+      "timeout": 600,
+      "enabled": true,
+      "options": null,
+      "required_vars": [
+        "REGISTRY_DOMAIN",
+        "REGISTRY_USERNAME",
+        "REGISTRY_PASSWORD"
+      ],
+      "image": "registry.hub.docker.com/vulcansec/vulcan-trivy:experimental",
+      "assets": [
+        "DockerImage"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-vulners-experimental",
+      "description": "Runs the nmap-script vulners against the target opened ports",
+      "timeout": 3600,
+      "enabled": true,
+      "options": null,
+      "image": "registry.hub.docker.com/vulcansec/vulcan-vulners:experimental",
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  },
+  {
+    "checktype": {
+      "name": "vulcan-wpscan-experimental",
+      "description": "Runs Wordpress scan",
+      "timeout": 1500,
+      "enabled": true,
+      "options": null,
+      "required_vars": [
+        "WPVULNDB_API_TOKEN"
+      ],
+      "image": "registry.hub.docker.com/vulcansec/vulcan-wpscan:experimental",
+      "assets": [
+        "Hostname"
+      ]
+    }
   }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-ftp-experimental",
-        "description": "Checks if an asset has FTP well known ports open and if they allow anonymous logins or if they are vulnerable to bounce attack",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-ftp:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-hdfs-experimental",
-        "description": "Checks if an asset has an Hadoop HDFS port exposed",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-hdfs:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-http-experimental",
-        "description": "Checks if an asset has HTTP well known ports open",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-http:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-  "checktype": {
-    "name": "vulcan-exposed-http-resources-experimental",
-    "description": "This checks looks for a well known or custom list of exposed resources in an HTTP address",
-    "timeout": 300,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-http-resources:experimental",
-    "assets": [
-      "Hostname",
-      "WebAddress"    ]
-  }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-memcached-experimental",
-        "description": "Checks if the asset contains an exposed Memcached server",
-        "timeout": 300,
-        "enabled": true,
-        "options": "{\"port\": 11211}",
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-memcached:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-rdp-experimental",
-        "description": "Checks if an asset has a RDP port exposed",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-rdp:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-  "checktype": {
-    "name": "vulcan-exposed-ssh-experimental",
-    "description": "Checks SSH server configuration for compliance with Mozilla OpenSSH guidelines",
-    "timeout": 300,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-ssh:experimental",
-    "assets": [
-      "Hostname",
-      "IP"
-    ]
-  }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-varnish-experimental",
-        "description": "Checks if an asset has a Varnish server exposed",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-exposed-varnish:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-    "checktype": {
-        "name": "vulcan-exposed-heartbleed-experimental",
-        "description": "Checks if an asset is vulnerable to Heartbleed",
-        "timeout": 300,
-        "enabled": true,
-        "options": null,
-        "image": "registry.hub.docker.com/vulcansec/vulcan-heartbleed:experimental",
-        "assets": [
-            "Hostname",
-            "IP"
-        ]
-    }
-},
-{
-  "checktype": {
-    "name": "vulcan-http-headers-experimental",
-    "description": "Analyzes the HTTP headers using Mozilla Observatory",
-    "timeout": 600,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-http-headers:experimental",
-    "assets": [
-      "Hostname"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-retirejs-experimental",
-    "description": "Checks web pages for vulnerable JavaScript libraries",
-    "timeout": 300,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-retirejs:experimental",
-    "assets": [
-      "Hostname"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-tls-experimental",
-    "description": "Analyzes TLS health of an asset using Mozilla Observatory",
-    "timeout": 600,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-tls:experimental",
-    "assets": [
-      "Hostname"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-trivy-experimental",
-    "description": "Scan docker images using aquasec/trivy",
-    "timeout": 600,
-    "enabled": true,
-    "options": null,
-    "required_vars": [
-      "REGISTRY_DOMAIN",
-      "REGISTRY_USERNAME",
-      "REGISTRY_PASSWORD"
-    ],
-    "image": "registry.hub.docker.com/vulcansec/vulcan-trivy:experimental",
-    "assets": [
-      "DockerImage"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-vulners-experimental",
-    "description": "Runs the nmap-script vulners against the target opened ports",
-    "timeout": 3600,
-    "enabled": true,
-    "options": null,
-    "image": "registry.hub.docker.com/vulcansec/vulcan-vulners:experimental",
-    "assets": [
-      "Hostname",
-      "IP"
-    ]
-  }
-},
-{
-  "checktype": {
-    "name": "vulcan-wpscan-experimental",
-    "description": "Runs Wordpress scan",
-    "timeout": 1500,
-    "enabled": true,
-    "options": null,
-    "required_vars": [
-      "WPVULNDB_API_TOKEN"
-    ],
-    "image": "registry.hub.docker.com/vulcansec/vulcan-wpscan:experimental",
-    "assets": [
-      "Hostname"
-    ]
-  }
-}
 ]
